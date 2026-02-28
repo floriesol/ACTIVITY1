@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'myapp',
+    'djoser',
 ]
 
 MIDDLEWARE = [
@@ -74,10 +75,18 @@ WSGI_APPLICATION = 'activity1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+# Source - https://stackoverflow.com/a/5421511
+# Posted by Alireza Savand, modified by community. See post 'Timeline' for change history
+# Retrieved 2026-02-28, License - CC BY-SA 3.0
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'activity1',                      
+        'USER': 'postgres',
+        'PASSWORD': 'postgre',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
